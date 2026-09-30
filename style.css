@@ -1,0 +1,118 @@
+@import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&family=Mochiy+Pop+One&family=Pacifico&display=swap');
+
+:root{
+  --bg:#fff8fc; --pink:#ff5da8; --pink2:#ffd7ea; --lav:#c9b5ff; --white:#5b3b50;
+  --glass:rgba(255,255,255,.78); --line:rgba(255,110,165,.25);
+}
+*{box-sizing:border-box}
+html,body{margin:0;min-height:100%;font-family:"Fredoka",system-ui,sans-serif;background:var(--bg);color:var(--white)}
+body{overflow-x:hidden}
+#stars{position:fixed;inset:0;z-index:-5;background:
+ radial-gradient(circle at 15% 10%,rgba(255,174,216,.55),transparent 24%),
+ radial-gradient(circle at 85% 18%,rgba(203,181,255,.42),transparent 25%),
+ radial-gradient(circle at 55% 90%,rgba(255,230,178,.5),transparent 25%),
+ linear-gradient(145deg,#fff8fc,#fff0f7 55%,#f6f0ff)}
+#stars:after{content:"";position:absolute;inset:0;opacity:.35;background-image:
+ radial-gradient(#ffacd0 1px,transparent 1px),radial-gradient(#c9b5ff 1px,transparent 1px);
+ background-size:87px 91px,139px 131px;background-position:0 0,30px 44px;animation:drift 24s linear infinite}
+.aurora{position:fixed;width:55vw;height:55vw;border-radius:50%;filter:blur(70px);opacity:.22;z-index:-4;animation:float 9s ease-in-out infinite}
+.aurora-a{background:#ff8fc5;top:-18vw;left:-12vw}.aurora-b{background:#c5a8ff;right:-18vw;bottom:-20vw;animation-delay:-4s}
+main{min-height:calc(100vh - 44px);display:flex;align-items:center;justify-content:center;padding:28px 16px 60px}
+.page{display:none;width:min(760px,100%);text-align:center;animation:pageIn .7s cubic-bezier(.2,.8,.2,1)}
+.page.active{display:block}
+.eyebrow{text-transform:uppercase;letter-spacing:2px;font-size:.72rem;color:#d85b91;margin:0 0 8px}
+.latin-title{font-family:"Mochiy Pop One",Pacifico,cursive;font-size:clamp(2.5rem,10vw,5.7rem);line-height:1.08;margin:10px 0 14px;text-shadow:0 5px 18px rgba(255,92,166,.22);animation:glow 2.5s ease-in-out infinite alternate}
+.subtitle{font-size:1.15rem;color:#704c60}.from-ali{color:#e85b98;font-weight:700}
+.glass{background:var(--glass);border:1px solid var(--line);box-shadow:0 16px 40px rgba(226,113,164,.16),inset 0 1px rgba(255,255,255,.9);backdrop-filter:blur(18px);-webkit-backdrop-filter:blur(18px);border-radius:28px}
+.countdown-card{margin:22px auto;padding:18px 16px;max-width:580px}
+.count-label{font-size:.8rem;letter-spacing:2px;color:#d85b91}
+.countdown{font-weight:800;font-size:clamp(2rem,9vw,4rem);letter-spacing:2px;background:linear-gradient(90deg,#e95b9a,#ff9bc5,#9d7de7,#e95b9a);-webkit-background-clip:text;color:transparent}
+.count-sub{font-size:.7rem;letter-spacing:4px;opacity:.7}
+.btn{border:0;border-radius:999px;padding:12px 20px;font:700 1rem "Baloo 2",sans-serif;cursor:pointer;transition:.2s;display:inline-flex;align-items:center;justify-content:center;gap:7px;margin:7px;color:white}
+.btn:hover{transform:translateY(-2px) scale(1.02)} .btn:active{transform:scale(.97)}
+.primary{background:linear-gradient(135deg,#ff66bb,#a66cff);box-shadow:0 10px 25px rgba(214,83,181,.25)}
+.ghost{background:rgba(255,255,255,.72);border:1px solid #ff9fc7}
+.tiny{font-size:.72rem;opacity:.55;margin-top:3px}
+.cute-orbit{position:relative;width:150px;height:150px;margin:0 auto 10px}
+.planet{position:absolute;inset:35px;border-radius:50%;display:grid;place-items:center;font-size:4.5rem;background:radial-gradient(circle at 35% 25%,#fff,#ffd0ec 18%,#ff68bc 58%,#7e43c7);box-shadow:0 0 45px #ff69be88;animation:bob 3s ease-in-out infinite}
+.cute-orbit span{position:absolute;left:67px;top:4px;font-size:1.1rem;animation:orbit 5s linear infinite;transform-origin:8px 71px}
+.cute-orbit span:nth-child(3){animation-delay:-1.2s}.cute-orbit span:nth-child(4){animation-delay:-2.4s}.cute-orbit span:nth-child(5){animation-delay:-3.6s}
+.page-icon{font-size:3rem;animation:bob 2.5s ease-in-out infinite;margin-bottom:2px}
+h2{font-size:clamp(2rem,7vw,3.3rem);margin:4px 0 18px;line-height:1.1}
+.video-card{padding:10px;margin:0 auto;max-width:700px}
+video{width:100%;max-height:58vh;display:block;border-radius:20px;background:#fff0f7;object-fit:contain}
+.caption{font-size:1.08rem;line-height:1.65;text-align:left;padding:18px 12px 10px;color:#704c60}
+.quote-mark{font-family:Georgia;font-size:3rem;color:#ff8dcc;vertical-align:-.5rem;line-height:0}
+.nav-row{display:flex;justify-content:center;flex-wrap:wrap;margin-top:8px}
+.secret-wrap{max-width:600px;margin:auto}.lock{font-size:4rem;animation:shake 3s infinite}
+.secret-note{font-size:1rem;color:#79556a}
+.password-box{padding:20px;margin:18px auto}
+.password-box input{width:100%;border:1px solid var(--line);background:#fff; color:#6b4458;padding:14px 16px;border-radius:16px;outline:none;font:600 1rem "Baloo 2";text-align:center}
+.password-box input:focus{border-color:#ff8ccc;box-shadow:0 0 0 4px #ff8ccc20}
+.passmsg{min-height:22px;color:#e85b98;margin:7px 0 0;font-weight:600}
+.letter-card{padding:clamp(22px,6vw,48px);position:relative;overflow:hidden}
+.letter-card:before{content:"";position:absolute;width:240px;height:240px;border-radius:50%;background:#ff5ebf18;filter:blur(20px);top:-120px;right:-100px}
+.stamp{font-size:3rem;animation:bob 2s ease-in-out infinite}
+.letter{text-align:left;font-family:"Fredoka",system-ui,sans-serif;font-size:clamp(1.15rem,3.9vw,1.48rem);line-height:1.85;white-space:pre-wrap;margin:10px 0 0;color:#704c60}
+.cursor{color:#ff9bd5;font-size:1.5rem;text-align:left;animation:blink .7s infinite}.hidden{display:none}
+
+.birthday-reward{margin:18px auto 4px;max-width:620px;padding:22px 18px;border:1px solid #ff8ccc55;border-radius:28px;background:linear-gradient(145deg,#ff5ebf1c,#a66cff18);box-shadow:0 0 35px #ff5ebf22;animation:pageIn .7s ease both}.birthday-reward h2{margin:4px 0 8px;color:#d94d91}.birthday-reward p:not(.eyebrow){margin:0 auto 14px;max-width:520px;line-height:1.65;color:#704c60}.reward-glow{font-size:3.4rem;animation:bob 1.8s ease-in-out infinite}.birthday-reward.opened{animation:rewardPop .7s ease both}@keyframes rewardPop{0%{opacity:0;transform:scale(.85)}65%{transform:scale(1.05)}100%{opacity:1;transform:scale(1)}}
+footer{position:fixed;bottom:8px;width:100%;text-align:center;font-size:.68rem;opacity:.55;color:#8d6277;pointer-events:none}
+#hearts{position:fixed;inset:0;pointer-events:none;z-index:20}
+.floating-heart{position:absolute;bottom:-40px;font-size:20px;animation:rise linear forwards;filter:drop-shadow(0 0 7px #ff79c4)}
+#confetti{position:fixed;inset:0;z-index:30;pointer-events:none}
+@keyframes pageIn{from{opacity:0;transform:translateY(18px) scale(.98)}to{opacity:1;transform:none}}
+@keyframes bob{50%{transform:translateY(-10px) rotate(2deg)}}
+@keyframes glow{to{text-shadow:0 0 28px #ff73c4,0 0 55px #a66cff66}}
+@keyframes float{50%{transform:translate(5vw,4vh) scale(1.12)}}
+@keyframes drift{to{background-position:87px 91px,169px 31px}}
+@keyframes orbit{to{transform:rotate(360deg)}}
+@keyframes blink{50%{opacity:0}}
+@keyframes rise{to{transform:translateY(-115vh) rotate(540deg);opacity:0}}
+@keyframes shake{0%,90%,100%{transform:rotate(0)}92%{transform:rotate(-7deg)}95%{transform:rotate(7deg)}}
+@media(max-width:520px){main{padding:18px 11px 55px}.btn{width:calc(100% - 14px);max-width:360px}.nav-row .btn{width:auto}.caption{font-size:1rem}.letter{line-height:1.7}}
+
+.visible-password{display:inline-block;margin:8px auto 2px;padding:10px 16px;border-radius:999px;background:#fff0f7;border:1px dashed #ff91bd;color:#d94d91;box-shadow:0 7px 20px rgba(236,96,151,.12)}
+.visible-password b{letter-spacing:.5px}
+
+/* Pinky + Blue refresh: stronger contrast, no white-on-white text */
+:root{
+  --bg:#fff7fc; --pink:#ff5fa8; --pink2:#ffd6e9; --blue:#5b8def; --blue2:#d9e7ff;
+  --navy:#26385f; --muted:#5c6d8f; --glass:rgba(255,255,255,.90); --line:rgba(91,141,239,.24);
+}
+html,body{color:var(--navy);background:#fff7fc}
+#stars{background:
+ radial-gradient(circle at 12% 10%,rgba(255,158,205,.58),transparent 25%),
+ radial-gradient(circle at 88% 18%,rgba(117,164,255,.45),transparent 27%),
+ radial-gradient(circle at 55% 92%,rgba(164,207,255,.40),transparent 26%),
+ linear-gradient(145deg,#fff8fc 0%,#fff0f7 48%,#edf4ff 100%)}
+#stars:after{background-image:
+ radial-gradient(#ff9fc9 1px,transparent 1px),radial-gradient(#8fb6ff 1px,transparent 1px)}
+.aurora-a{background:#ff77b7}.aurora-b{background:#6f9cff}
+.eyebrow{color:#e04f91}
+.latin-title{font-family:"Mochiy Pop One", "Fredoka", cursive;color:#31456f;text-shadow:0 5px 18px rgba(91,141,239,.20)}
+.subtitle,.secret-note,.caption,.letter-card .letter{color:#40557e}
+.from-ali{color:#e04f91}
+h2{font-family:"Mochiy Pop One","Fredoka",sans-serif;color:#26385f;text-shadow:0 3px 10px rgba(91,141,239,.10)}
+.glass{background:rgba(255,255,255,.92);border-color:rgba(91,141,239,.25);box-shadow:0 16px 40px rgba(73,119,201,.13),0 8px 24px rgba(236,89,155,.08),inset 0 1px rgba(255,255,255,1)}
+.count-label,.count-sub{color:#5773aa}
+.countdown{background:linear-gradient(90deg,#ec579c,#ff77b6,#578df0,#5d74d9,#ec579c);-webkit-background-clip:text;background-clip:text}
+.primary{background:linear-gradient(135deg,#ff5fa8,#ef76bd 45%,#5b8def);box-shadow:0 10px 25px rgba(91,141,239,.22)}
+.ghost{background:linear-gradient(135deg,#fff,#eef5ff);border:1px solid #8db1f4;color:#36527f}
+.btn{font-family:"Fredoka",sans-serif}
+.video-card{background:rgba(255,255,255,.90)}
+video{background:#eaf2ff}
+.caption{color:#40557e}
+.quote-mark{color:#5b8def}
+.password-box input{background:#f8fbff;color:#26385f;border-color:#9ab8f5;font-family:"Fredoka",sans-serif}
+.password-box input::placeholder{color:#7b8cab}
+.password-box input:focus{border-color:#5b8def;box-shadow:0 0 0 4px #5b8def20}
+.passmsg{color:#d94f91}
+.letter-card:before{background:#6b9bff20}
+.letter{color:#334b78!important}
+.cursor{color:#e95c9e}
+.birthday-reward{border-color:#8db1f455;background:linear-gradient(145deg,#ffe0ef,#e3edff);box-shadow:0 0 35px #6b9bff22}
+.birthday-reward h2{color:#d94f91}
+.birthday-reward p:not(.eyebrow){color:#40557e}
+footer{color:#65789e;opacity:.8}
+.page-icon{filter:drop-shadow(0 5px 8px rgba(91,141,239,.15))}
