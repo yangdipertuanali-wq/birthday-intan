@@ -67,3 +67,31 @@ footer{position:fixed;bottom:8px;width:100%;text-align:center;font-size:.68rem;o
 @media(max-width:520px){main{padding:18px 11px 55px}.btn{width:calc(100% - 14px);max-width:360px}.nav-row .btn{width:auto}.caption{font-size:1rem}.letter{line-height:1.7}}
 
 @keyframes floatFlowers{50%{transform:translateY(-12px) rotate(2deg)}}
+/* 💗💙 BACKGROUND LOVE + BUNGA BIRU */
+html, body {
+  background: linear-gradient(135deg, #fff7fc 0%, #fff0f8 48%, #eaf8ff 100%) !important;
+  color: #304b69;
+}
+
+#stars {
+  z-index: 0 !important;
+  pointer-events: none;
+}
+
+#stars:before {
+  opacity: .38 !important;
+}
+
+#stars:after {
+  opacity: .28 !important;
+}
+
+.aurora {
+  z-index: 1 !important;
+  pointer-events: none;
+}
+
+main {
+  position: relative;
+  z-index: 2;
+}
