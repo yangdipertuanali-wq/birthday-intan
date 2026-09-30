@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#ffd6eb">
+  <title>Untuk Intan Nur Aini 💗🎀</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="stars"></div>
+  <div class="aurora aurora-a"></div><div class="aurora aurora-b"></div>
+  <div id="hearts"></div>
+  <div class="sky-scene" aria-hidden="true">
+    <div class="cloud cloud-1">☁️</div><div class="cloud cloud-2">☁️</div><div class="cloud cloud-3">☁️</div>
+    <div class="tree tree-1">🌳</div><div class="tree tree-2">🌲</div><div class="tree tree-3">🌳</div>
+    <div class="love-bubble love-1">♡</div><div class="love-bubble love-2">♥</div><div class="love-bubble love-3">♡</div>
+  </div>
+  <canvas id="confetti"></canvas>
+
+  <main>
+    <!-- PAGE 1 -->
+    <section class="page active" id="page1">
+      <div class="cute-orbit">
+        <div class="planet">💗</div>
+        <span>✨</span><span>💞</span><span>🌙</span><span>⭐</span>
+      </div>
+      <p class="eyebrow">A little universe made only for you</p>
+      <h1 class="latin-title">HAPPYY BIRTHDAYY<br>SAYANGKUU<br>CANTIKKUU 🫶🏻💞💖</h1>
+      <p class="subtitle">Untuk <b>Intan Nur Aini</b> 💗<br><span class="from-ali">dari alii, pacarmu paling guantengg 🎀💞</span></p>
+      <div class="glass countdown-card">
+        <div class="count-label">MENUJU 7 OKTOBER ✨</div>
+        <div id="countdown" class="countdown">-- : -- : -- : --</div>
+        <div class="count-sub">hari · jam · menit · detik</div>
+      </div>
+      <div id="birthdayReward" class="birthday-reward hidden">
+        <div class="reward-glow">🎁</div>
+        <p class="eyebrow">THE DAY IS HERE 💗</p>
+        <h2>WAKTUNYAA TIBA, SAYANGG!! 🥹🎂</h2>
+        <p>Countdown-nya sudah habisss. Ada hadiah kecil yang Ali siapin khusus buat Intan 💞</p>
+        <button class="btn primary" onclick="openBirthdayGift()">BUKA HADIAHNYA 🎁💖</button>
+      </div>
+      <button id="startJourneyBtn" class="btn primary" onclick="go(2)">Mulai perjalanan kita 💌</button>
+      <button class="btn ghost" onclick="toggleMusic()">🎵 Musiknya disinii yahh 💗</button>
+      <p class="tiny">Tip: tekan tombol musik setelah halaman dibuka supaya musik bisa dimainkan 🎵💗</p>
+    </section>
+
+    <!-- PAGE 2 -->
+    <section class="page" id="page2">
+      <div class="page-icon">🌷</div>
+      <p class="eyebrow">Chapter 01 · first memory</p>
+      <h2>Pertama kali aku melihat kamu... 🥺</h2>
+      <div class="video-card glass">
+        <video controls playsinline preload="metadata" src="video-awal-kita.mp4"></video>
+        <div class="caption">
+          <span class="quote-mark">“</span>
+          ini adalahhh videoo isinyaa foto2 palingg cantik menurut akuu, pas awal ketemuuu, akuu belumm kenalll kamu sepenuhnyaa, first timee aku ngeliatt kamuu, aku ngeliat kamuu sebagai cewekk imut, baikk, poloss, gaa anehh - aneh , hehe
+        </div>
+      </div>
+      <div class="nav-row"><button class="btn ghost" onclick="go(1)">← kembali</button><button class="btn primary" onclick="go(3)">Lanjut yaa 💞 →</button></div>
+    </section>
+
+    <!-- PAGE 3 -->
+    <section class="page" id="page3">
+      <div class="page-icon">🎀</div>
+      <p class="eyebrow">Chapter 02 · little happiness</p>
+      <h2>Moment kecil yang bikin aku senyum 💕</h2>
+      <div class="video-card glass">
+        <video controls playsinline preload="metadata" src="video-kedua.mp4"></video>
+        <div class="caption">
+          <span class="quote-mark">“</span>
+          sayangg pas dimomentt inii keliatann bahagiaa bangett yah hehee, makasiihh yaa sayangkuu udahh mau nerimaaa segalaa kekurangankuu🥺🥺💖💖💞💞🫶🏻🫶🏻
+        </div>
+      </div>
+      <div class="nav-row"><button class="btn ghost" onclick="go(2)">← balik</button><button class="btn primary" onclick="go(4)">Ada satu kejutan lagi… 🎁</button></div>
+    </section>
+
+    <!-- PAGE 4 -->
+    <section class="page" id="page4">
+      <div class="secret-wrap">
+        <div class="lock">🔐</div>
+        <p class="eyebrow">Secret little room</p>
+        <h2>Ini cuma boleh dibuka sama kamu & Ali 🤫💗</h2>
+        <p class="secret-note">Ada sesuatu yang aku simpan di sini. Masukkan password rahasia kitaa 💗</p>
+        
+        <div class="glass password-box">
+          <input id="password" type="password" autocomplete="off" placeholder="password rahasia..." onkeydown="if(event.key==='Enter') unlock()">
+          <button class="btn primary" onclick="unlock()">Buka kejutan 💖</button>
+          <p id="passmsg" class="passmsg"></p>
+        </div>
+        <button class="btn ghost" onclick="go(3)">← belum dulu</button>
+      </div>
+    </section>
+
+    <!-- PAGE 5 -->
+    <section class="page" id="page5">
+      <div class="letter-card glass">
+        <div class="stamp">💌</div>
+        <p class="eyebrow">dari alii, pacarmu paling guantengg 💗</p>
+        <h2>Untuk sayangkuuu 🤍</h2>
+        <p id="typedLetter" class="letter"></p>
+        <div id="typingCursor" class="cursor">▌</div>
+        <button id="revealBtn" class="btn primary hidden" onclick="celebrate()">Peluk virtual dulu 🫂💞</button>
+      </div>
+    </section>
+  </main>
+
+  <footer>made with too much love by Ali · for Intan 🌙💞</footer>
+
+  <audio id="bgMusic" loop preload="none" src="musik-untuk-intan.mp3"></audio>
+  <script src="script.js"></script>
+</body>
+</html>
