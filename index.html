@@ -1,0 +1,137 @@
+<!doctype html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Happy Birthday My Girl Friendd 💗</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div id="fallingFlowers" aria-hidden="true"></div>
+
+<main>
+<section class="page active" id="p1">
+  <div id="firstLock" class="first-lock">
+    <div class="eyebrow">A LITTLE SECRET FOR YOU ✦</div>
+    <div class="lock-flower" aria-hidden="true">
+      <svg viewBox="0 0 160 150">
+        <defs>
+          <radialGradient id="petalPink"><stop stop-color="#ffd7e7"/><stop offset=".65" stop-color="#f58eb9"/><stop offset="1" stop-color="#c83e78"/></radialGradient>
+          <radialGradient id="centerGold"><stop stop-color="#ffe8a3"/><stop offset=".55" stop-color="#e8a02d"/><stop offset="1" stop-color="#9a5414"/></radialGradient>
+        </defs>
+        <g fill="url(#petalPink)" stroke="#b93670" stroke-width="1.2">
+          <ellipse cx="80" cy="42" rx="24" ry="43"/><ellipse cx="80" cy="108" rx="24" ry="43"/>
+          <ellipse cx="47" cy="75" rx="43" ry="24"/><ellipse cx="113" cy="75" rx="43" ry="24"/>
+          <ellipse cx="57" cy="52" rx="22" ry="39" transform="rotate(-45 57 52)"/>
+          <ellipse cx="103" cy="52" rx="22" ry="39" transform="rotate(45 103 52)"/>
+          <ellipse cx="57" cy="98" rx="22" ry="39" transform="rotate(45 57 98)"/>
+          <ellipse cx="103" cy="98" rx="22" ry="39" transform="rotate(-45 103 98)"/>
+        </g>
+        <circle cx="80" cy="75" r="18" fill="url(#centerGold)"/>
+        <circle cx="74" cy="69" r="3" fill="#fff0a9"/><circle cx="87" cy="77" r="3" fill="#fff0a9"/>
+        <circle cx="78" cy="84" r="2.5" fill="#fff0a9"/><circle cx="91" cy="67" r="2.5" fill="#fff0a9"/>
+      </svg>
+    </div>
+    <div class="lock-icon">🔐</div>
+    <p class="small">a tiny secret before your surprise</p>
+    <h1>for my<br><em>favorite girl</em> 💗</h1>
+    <p class="sub">masukkan password untuk masuk ke kejutanmu</p>
+
+    <div class="pass">
+      <label>SECRET PASSWORD</label>
+      <input id="firstPw" type="password" autocomplete="off" placeholder="••••••••••••">
+      <button class="btn" onclick="unlockFirst()">masuk ke kejutan ♡</button>
+      <p id="firstMsg"></p>
+    </div>
+    <p class="sign">— dari alii, pacarmu paling guantengg ♡</p>
+  </div>
+
+  <div id="birthdayContent" class="birthday-content hidden">
+    <div class="eyebrow">A LITTLE UNIVERSE FOR YOU ✦</div>
+    <div class="hero-flower" aria-hidden="true">
+      <svg viewBox="0 0 180 180">
+        <defs>
+          <radialGradient id="heroPetal"><stop stop-color="#fff0f7"/><stop offset=".5" stop-color="#ff8fbc"/><stop offset="1" stop-color="#c92e73"/></radialGradient>
+        </defs>
+        <g fill="url(#heroPetal)" stroke="#b52b69" stroke-width="1.2">
+          <ellipse cx="90" cy="45" rx="27" ry="47"/><ellipse cx="90" cy="135" rx="27" ry="47"/>
+          <ellipse cx="45" cy="90" rx="47" ry="27"/><ellipse cx="135" cy="90" rx="47" ry="27"/>
+          <ellipse cx="58" cy="58" rx="25" ry="44" transform="rotate(-45 58 58)"/>
+          <ellipse cx="122" cy="58" rx="25" ry="44" transform="rotate(45 122 58)"/>
+          <ellipse cx="58" cy="122" rx="25" ry="44" transform="rotate(45 58 122)"/>
+          <ellipse cx="122" cy="122" rx="25" ry="44" transform="rotate(-45 122 122)"/>
+        </g>
+        <circle cx="90" cy="90" r="22" fill="#e9a12d"/>
+        <circle cx="83" cy="83" r="4" fill="#ffe8a0"/><circle cx="98" cy="88" r="3.5" fill="#ffe8a0"/>
+        <circle cx="88" cy="100" r="3.5" fill="#ffe8a0"/><circle cx="101" cy="101" r="2.8" fill="#ffe8a0"/>
+      </svg>
+    </div>
+    <p class="small">to my favorite girl</p>
+    <h1>happy birthday<br><em>my girl friendd</em> 💗</h1>
+    <p class="sub">made with love, just for you.</p>
+
+    <div class="count-card">
+      <span>COUNTDOWN TO 7 OCTOBER</span>
+      <strong id="count">00 : 00 : 00 : 00</strong>
+      <small>days · hours · minutes · seconds</small>
+    </div>
+
+    <div id="gift" class="gift">
+      <div class="gift-box">
+        <div class="gift-lid"></div><div class="gift-body"></div>
+        <div class="gift-ribbon-v"></div><div class="gift-ribbon-h"></div>
+      </div>
+      <p id="giftText">tunggu sampai waktunya tiba... ✨</p>
+    </div>
+
+    <button class="btn" onclick="go(2)">open our little story →</button>
+    <button class="music" onclick="toggleMusic()">♪ musiknya disinii yah 💗</button>
+    <p class="sign">— dari alii, pacarmu paling guantengg ♡</p>
+  </div>
+</section>
+
+<section class="page" id="p2">
+  <span class="num">02 / 04</span>
+  <div class="eyebrow">OUR FIRST LITTLE MEMORY</div>
+  <h2>my beautifulll girll<span>💕</span></h2>
+  <div class="video"><video controls playsinline preload="metadata" src="video-awal-kita.mp4"></video></div>
+  <p class="caption">ini adalahhh videoo isinyaa foto2 palingg cantik menurut akuu, pas awal ketemuuu, akuu belumm kenalll kamu sepenuhnyaa, first timee aku ngeliatt kamuu, aku ngeliat kamuu sebagai cewekk imut, baikk, poloss, gaa anehh - aneh , hehe</p>
+  <div class="nav"><button class="back" onclick="go(1)">←</button><button class="btn" onclick="go(3)">littlee momentt →</button></div>
+</section>
+
+<section class="page" id="p3">
+  <span class="num">03 / 04</span>
+  <div class="eyebrow">A LITTLE MOMENT</div>
+  <h2>littlee <em>momentt</em> ✦</h2>
+  <div class="video"><video controls playsinline preload="metadata" src="video-kedua.mp4"></video></div>
+  <p class="caption">sayangg pas dimomentt inii keliatann bahagiaa bangett yah hehee, makasiihh yaa sayangkuu udahh mau nerimaaa segalaa kekurangankuu🥺🥺💖💖💞💞🫶🏻🫶🏻</p>
+  <div class="nav"><button class="back" onclick="go(2)">←</button><button class="btn" onclick="go(4)">one last thing →</button></div>
+</section>
+
+<section class="page" id="p4">
+  <span class="num">04 / 04</span>
+  <div class="hug">🫂💗</div>
+  <div class="eyebrow">A SECRET LITTLE ROOM</div>
+  <h2>just for you, my love 💗</h2>
+  <p class="sub">masukkan password untuk membuka surat terakhir</p>
+  <div class="pass">
+    <label>SECRET PASSWORD</label>
+    <input id="pw" type="password" autocomplete="off" placeholder="••••••••••••">
+    <button class="btn" onclick="unlock()">open my letter ♡</button>
+    <p id="msg"></p>
+  </div>
+  <button class="backlink" onclick="go(3)">← kembali</button>
+</section>
+
+<section class="page letterpage" id="p5">
+  <div class="eyebrow">FROM MY HEART TO YOURS ✦</div>
+  <h2>for my beautiful girl</h2>
+  <div class="letter"><span id="typed"></span><i class="cursor">▌</i></div>
+  <button class="btn" onclick="typeLetter()">read it again ♡</button>
+</section>
+</main>
+
+<audio id="music" loop src="musik-untuk-intan.mp3"></audio>
+<script src="script.js"></script>
+</body>
+</html>
